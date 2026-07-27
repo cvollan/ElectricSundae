@@ -227,10 +227,32 @@ main {
   font-size: 1rem;
 }
 
-.panel-events ul {
+.testimonial-grid {
   display: grid;
-  gap: 0.3rem;
-  padding-left: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.testimonial-card {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(145deg,
+      rgba(255, 59, 137, 0.15),
+      rgba(37, 244, 255, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.testimonial-card blockquote {
+  margin: 0 0 0.6rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+.testimonial-card figcaption {
+  color: var(--electric-cyan);
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .site-footer {
