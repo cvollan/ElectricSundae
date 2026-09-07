@@ -1,0 +1,26 @@
+name: Deploy production site
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: pages-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
+          clean-exclude: |
+            pr-preview/
+          force: false
