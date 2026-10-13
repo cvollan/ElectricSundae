@@ -260,6 +260,11 @@ main {
     transition: opacity 0.15s ease, visibility 0.15s;
   }
 
+  .flavor-grid article.flip p {
+    top: auto;
+    bottom: calc(100% + 0.4rem);
+  }
+
   .flavor-grid article:hover p,
   .flavor-grid article:focus p {
     opacity: 1;
