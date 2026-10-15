@@ -50,23 +50,41 @@
       <div class="menu-section">
         <h3>Exclusive Flavors</h3>
         <div class="flavor-grid">
-          <article>
+          <article tabindex="0">
             <h4>Vanilla</h4>
+            <p>Premium vanilla custard using only organic ingredients.</p>
           </article>
-          <article>
+          <article tabindex="0">
             <h4>Chocolate</h4>
+            <p>Premium custard base with 100% organic dark and milk chocolate.</p>
           </article>
-          <article>
+          <article tabindex="0">
             <h4>Cookies and Cream</h4>
+            <p>Our premium custard base with chunks of real Oreos mixed in.</p>
           </article>
-          <article>
+          <article tabindex="0">
+            <h4>Banana Pudding</h4>
+            <p>Premium organic banana-infused custard base with banana chunks and vanilla wafers mixed in.</p>
+          </article>
+          <article tabindex="0">
+            <h4>Cookie Dough</h4>
+            <p>Premium custard base mixed with hand-rolled giant chunks of cookie dough.</p>
+          </article>
+          <article tabindex="0">
+            <h4>Donut</h4>
+            <p>Premium ice cream with emulsified glazed donut that'll make you think Krispy Kreme should make it.</p>
+          </article>
+          <article tabindex="0">
             <h4>Orange Sherbet</h4>
+            <p>100% natural orange juice mixed with heavy cream and milk to make the perfect scoop.</p>
           </article>
-          <article>
+          <article tabindex="0">
             <h4>Strawberry Sorbet*</h4>
+            <p>Organic strawberries and sugar combine to make this sweet treat for our lactose-averse friends.</p>
           </article>
-          <article>
+          <article tabindex="0">
             <h4>Mango Sorbet*</h4>
+            <p>Organic mangos used to create a magical fruity masterpiece.</p>
           </article>
         </div>
       </div>
@@ -89,6 +107,18 @@
   <footer class="site-footer">
     <p>© <span id="year">2026</span> Electric Sundae. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Flip a flavor description below its card when it would run off the top of the viewport.
+    document.querySelectorAll(".flavor-grid article").forEach((card) => {
+      const flip = () => {
+        card.classList.remove("flip");
+        card.classList.toggle("flip", card.querySelector("p").getBoundingClientRect().top < 0);
+      };
+      card.addEventListener("mouseenter", flip);
+      card.addEventListener("focus", flip);
+    });
+  </script>
 </body>
 
 </html>
