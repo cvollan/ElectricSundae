@@ -109,13 +109,11 @@
   </footer>
 
   <script>
-    // Flip a flavor description above its card when it would run off the bottom of the viewport.
+    // Flip a flavor description below its card when it would run off the top of the viewport.
     document.querySelectorAll(".flavor-grid article").forEach((card) => {
       const flip = () => {
         card.classList.remove("flip");
-        const tip = card.querySelector("p").getBoundingClientRect();
-        const roomAbove = card.getBoundingClientRect().top > tip.height + 8;
-        card.classList.toggle("flip", tip.bottom > innerHeight && roomAbove);
+        card.classList.toggle("flip", card.querySelector("p").getBoundingClientRect().top < 0);
       };
       card.addEventListener("mouseenter", flip);
       card.addEventListener("focus", flip);
