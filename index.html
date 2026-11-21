@@ -7,6 +7,14 @@
   <title>Electric Sundae | Event Ice Cream Cart</title>
   <meta name="description"
     content="Electric Sundae brings handcrafted ice cream and high-voltage fun to private parties, weddings, and community events." />
+  <link rel="canonical" href="https://electric-sundae.com/" />
+  <link rel="icon" type="image/webp" href="logo_small.webp" />
+  <meta name="theme-color" content="#070b18" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://electric-sundae.com/" />
+  <meta property="og:title" content="Electric Sundae | Event Ice Cream Cart" />
+  <meta property="og:description" content="Homemade ice cream served by the scoop!" />
+  <meta property="og:image" content="https://electric-sundae.com/logo_long.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap"
@@ -109,6 +117,8 @@
   </footer>
 
   <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     // Flip a flavor description below its card when it would run off the top of the viewport.
     document.querySelectorAll(".flavor-grid article").forEach((card) => {
       const flip = () => {
