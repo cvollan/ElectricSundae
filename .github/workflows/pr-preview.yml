@@ -23,3 +23,4 @@ jobs:
           source-dir: ./
           preview-branch: gh-pages
           umbrella-dir: pr-preview
+          pages-base-url: electric-sundae.com
